@@ -1,0 +1,38 @@
+@import "../constants";
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  // margin: 25px;
+  background: none;
+  border: 3px solid #ff0dff;
+  box-shadow: $spinner-shadow;
+
+  &::after {
+    content: "";
+    width: 2px;
+    height: 32px;
+    background: orangered;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -1px;
+
+    transform-origin: 0 0;
+    animation: spin linear 1s infinite ;
+   
+  }
+}
+
+@keyframes spin {
+//   0%{
+//     transform: rotate(0deg);
+// } 
+100%{
+    transform: rotate(360deg);
+  }
+}
+
+
